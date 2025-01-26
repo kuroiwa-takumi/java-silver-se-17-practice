@@ -4,70 +4,30 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        // chapter2-7
-        Sample sample = new Sample(10);
-        sample.test();
+        // chapter2-11
+        String str = "abcde";
+        System.out.println(str.charAt(4)); // e
+        // System.out.println(str.charAt(5)); // StringIndexOutOfBoundsException
 
-        // chapter2-8
-        // varにおける型推論はコンパイル時に行われる
-        Chapter2To8A a = new Chapter2To8B(); // ポリモーフィズム
-        // a = new Chapter2To8C(); // これはエラー、不適合な型: Chapter2To8CをChapter2To8Aに変換できません
-        a.test(); // Chapter2To8Bのメソッドが呼ばれる
+        // chapter2-12
+        // indexOfメソッドは指定された文字列がどの位置にあるかを返す
+        System.out.println(str.indexOf("abcdef")); // -1
+        System.out.println(str.indexOf("bc")); // 1
+        System.out.println(str.indexOf("cd")); // 2
 
-        Chapter2To8C c = new Chapter2To8C();
-        c.test(); // Chapter2To8C独自のメソッドが呼ばれる
+        // chapter2-13
+        System.out.println(str.substring(2, 4)); // cd
 
-        // chapter2-10
-        String str = "hoge, world.";
-        hello(str); // 参照元の値はそのまま
-        System.out.println(str); // hoge, world.
-    }
+        // chapter2-14
+        String str2 = "aaaa";
+        System.out.println(str2.replaceAll("aa", "b")); // bb
 
-    /**
-     * chapter2-7: クラスのフィールドにvarは使えない
-     */
-    static class Sample {
-        private int value;
-        public Sample(int value) {
-            this.value = value;
-        }
-        public void test() {
-            System.out.println(value);
-        }
-    }
+        String str3 = "aaaa";
+        System.out.println(str3.replace("aa", "b")); // bb
 
-    /**
-     * chapter2-8A
-     */
-    static class Chapter2To8A {
-        public void test() {
-            System.out.println("Chapter2To8A");
-        }
-    }
-
-    /**
-     * chapter2-8B
-     */
-    static class Chapter2To8B extends Chapter2To8A {
-        @Override
-        public void test() {
-            System.out.println("Chapter2To8B");
-        }
-    }
-
-    /**
-     * chapter2-8C
-     */
-    static class Chapter2To8C {
-        public void test() {
-            System.out.println("Chapter2To8C");
-        }
-    }
-
-    /**
-     * chapter2-10：Stringオブジェクトは不変オブジェクト
-     */
-    private static void hello(String msg) {
-        msg.replaceAll("hoge", "hello");
+        // chapter2-15
+        // "abcde" = 5
+        System.out.println(str.charAt(str.length())); // 実行時エラー：StringIndexOutOfBoundsException
+        System.out.println(str.charAt(str.length() - 1)); // e
     }
 }
