@@ -9,8 +9,8 @@ public class Main {
         System.out.println(str.substring(1, 3).startsWith("b")); // true
 
         // chapter2-17
-        String str1 = "Hello, ".concat("World!"); // Hello, World!
-        System.out.println(str1);
+        String str1 = "Hello, ".concat("World!");
+        System.out.println(str1); // Hello, World!
 
         // chapter2-18
         StringBuilder sb = new StringBuilder("abcde");
