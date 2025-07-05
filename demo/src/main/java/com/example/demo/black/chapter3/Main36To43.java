@@ -1,7 +1,9 @@
+package com.example.demo.black.chapter3;
+
 import java.util.List;
 import java.util.ArrayList;
 
-public class Main {
+public class Main36To43 {
     public static void main(String[] args) {
         // chapter3-36
         String[][] array = { { "A", "B", "C" } };

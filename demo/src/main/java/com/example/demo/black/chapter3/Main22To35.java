@@ -1,4 +1,6 @@
-public class Main {
+package com.example.demo.black.chapter3;
+
+public class Main22To35 {
     public static void main(String[] args) {
         // chapter3-22
         // chapter3-23

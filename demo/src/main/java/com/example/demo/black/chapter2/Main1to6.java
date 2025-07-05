@@ -64,7 +64,7 @@ public class Main1to6 {
         System.out.println(a[1][1]); // 4
 
         short b = (short) 'A';
-        System.out.println(b); // 65
+        System.out.println(b); // 65, 'A'のUnicode値 参考：https://www.ascii-code.com/
 
         boolean d1 = (10 == 10);
         System.out.println(d1); // true

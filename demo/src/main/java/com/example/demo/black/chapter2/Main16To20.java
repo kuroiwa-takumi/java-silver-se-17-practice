@@ -7,6 +7,7 @@ public class Main16To20 {
         System.out.println(str.substring(1, 3).startsWith("b")); // true
 
         // chapter2-17
+        // Stringのconcatメソッドは、文字列を連結する
         String str1 = "Hello, ".concat("World!");
         System.out.println(str1); // Hello, World!
 
